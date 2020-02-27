@@ -11,25 +11,28 @@
 </head>
 
 <body>
-	<div style="height: 400px;">
-		<div style="float: left; height: 400px; width: 300px;">
-			<span id="character">あ</span>
-		</div>
-		<div align="center" style="float: left; height: 400px; width: 300px;">
-			<div style="height:133px"></div>
-			<div id="answer"></div>
-			<div id="scolding"></div>
-		</div>
-	</div>
-	<div id="demo">
-		<input  id="typetext" type="text" value="a">
-		<button id="jsstyle" onclick="check();">Check Answer</button>
-	</div>
 
+<div style="width: 900px; height: 400px;" class="center">
+	<div style="float: left; height: 400px; width: 300px;"></div>
+	<div style="float: left; height: 400px; width: 300px;">
+		<span id="character">あ</span>
+	</div>
+	<div style="float: left; height: 400px; width: 300px;">
+		<div style="height:133px"></div>
+		<div id="answer"></div>
+		<div id="scolding"></div>
+	</div>
+</div>
+<div id="demo" class="center" style="width: 360px;">
+	<input  id="typetext" type="text" value="a">
+	<button id="jsstyle" onclick="check();">Check Answer</button>
+</div>
+<div class="center" style="width: 100px; text-align: center; padding-top: 20px; padding-bottom: 20px">
 	<span id="correct">0</span>
 	<span id="incorrect">0</span>
+</div>
 
-<table class="hiragana">
+<table class="center">
   <tr>
     <th>あ</th>
     <th>か</th>
@@ -134,7 +137,10 @@
   </tr>
 </table>
 
-<button onclick="showbox();">Click me please oh please please just click me thanks :)</button>
+<div class="center" style="width: 150px; padding-top: 20px; padding-bottom: 20px;">
+	<button onclick="showbox();">Update choices</button>
+</div>
+
 <span id="display-output3"></span>
 
 </body>
