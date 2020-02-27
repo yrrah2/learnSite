@@ -110,7 +110,6 @@ $("#typetext").keyup(function(event) {
 
 function showbox() {
 	var checkedBoxes = document.querySelectorAll('input.checkbox:checked');
-	var checkedString = '';
 
 	kana_now = String();
 	romanji_now = Array();
@@ -118,9 +117,7 @@ function showbox() {
 		kana_now = kana_now.concat(kana[checkedBoxes[i].value])
 		romanji_now = romanji_now.concat(romanji[checkedBoxes[i].value])
 	}
-
-	document.getElementById("display-output3").innerHTML = checkedString;
-
+	
 	change_image();
 }
 
