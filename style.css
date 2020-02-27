@@ -24,6 +24,23 @@ body {
 table {
   border-collapse: separate;
   border-spacing: 50px 0;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.tab {
+	border: 1px solid black;
+	padding-bottom: 1px;
+	padding-top: 6px;
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: pointer;	
+}
+
+#hiragana_tab {
+	background-color: #eb8484;
 }
 
 td {

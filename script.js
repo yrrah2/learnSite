@@ -12,7 +12,22 @@ var kana = ["あいうえお",
 	"まみむめも",
 	"やゆよ",
 	"らりるれろ",
-	"わを"]
+	"わを",
+	"アイウエオ",
+	"カキクケコ",
+	"ガギグゲゴ",
+	"サシスセソ",
+	"ザジズゼゾ",
+	"タチツテト",
+	"ダヂヅデド",
+	"ナニヌネノ",
+	"ハヒフヘホ",
+	"バビブベボ",
+	"パピプペポ",
+	"マミムメモ",
+	"ヤユヨ",
+	"ラリルレロ",
+	"ワヲ"]
 
 var romanji = [["a","i","u","e","o"],
 	["ka","ki","ku","ke","ko",],
@@ -28,7 +43,23 @@ var romanji = [["a","i","u","e","o"],
 	["ma","mi","mu","me","mo",],
 	["ya","yu","yo",],
 	["ra","ri","ru","re","ro",],
-	["wa","wo",]]
+	["wa","wo"],
+	["a","i","u","e","o"],
+	["ka","ki","ku","ke","ko",],
+	["ga","gi","gu","ge","go",],
+	["sa","shi","su","se","so",],
+	["za","ji","zu","ze","zo",],
+	["ta","chi","tsu","te","to",],
+	["da","ji","dzu","de","do",],
+	["na","ni","nu","ne","no",],
+	["ha","hi","hu","he","ho",],
+	["ba","bi","bu","be","bo",],
+	["pa","pi","pu","pe","po",],
+	["ma","mi","mu","me","mo",],
+	["ya","yu","yo",],
+	["ra","ri","ru","re","ro",],
+	["wa","wo"]]
+
 
 var kana_now = kana[0]
 var romanji_now = romanji[0];
@@ -91,4 +122,21 @@ function showbox() {
 	document.getElementById("display-output3").innerHTML = checkedString;
 
 	change_image();
+}
+
+function hiragana() {
+	$("#hiragana").css("display", "table");
+	$("#katakana").css("display", "none");
+	
+	$("#hiragana_tab").css("background-color", "#eb8484");
+	$("#katakana_tab").css("background-color", "transparent");
+}
+
+function katakana() {
+	$("#hiragana").css("display", "none");
+	$("#katakana").css("display", "table");
+
+	$("#hiragana_tab").css("background-color", "transparent");
+	$("#katakana_tab").css("background-color", "#eb8484");
+
 }
