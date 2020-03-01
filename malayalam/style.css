@@ -4,7 +4,7 @@
 }
 
 #character {
-	font-size: 30vmin;
+	font-size: 20vmin;
 	font-weight: bold;
 	align-self: center;
 }
@@ -47,7 +47,7 @@ table {
 	cursor: pointer;	
 }
 
-#hiragana_tab {
+#consonant_tab {
 	background-color: #eb8484;
 }
 

@@ -1,10 +1,17 @@
-﻿var kana = ["കചടതപ",
-"ഖഛഠഥഫ",
-"ഗജഡദബ",
-"ഘഝഢധഭ",
-"ങഞണനമ",
-"യരലവ",
-"ശഷസഹ"]
+var kana = [["ക","ച","ട","ത","പ"],
+	["ഖ","ഛ","ഠ","ഥ","ഫ"],
+	["ഗ","ജ","ഡ","ദ","ബ"],
+	["ഘ","ഝ","ഢ","ധ","ഭ"],
+	["ങ","ഞ","ണ","ന","മ"],
+	["യ","ര","ല","വ"],
+	["ശ","ഷ","സ","ഹ"],
+	["അ","ക","ആ","കാ"],
+	["ഇ","കി","ഈ","കീ"],
+	["ഉ","കു","ഊ","കൂ"],
+	["എ","കെ","ഏ","കേ"],
+	["ഒ","കൊ","ഓ","കോ"],
+	["ഋ","കൃ","ൠ","കൄ"],
+	["ഌ","കൢ","ൡ","കൣ"]]
 
 var romanji = [["ka","ca","ta","ta.","pa"],
 ["kha","cha","tha","tha.","pha"],
@@ -12,7 +19,12 @@ var romanji = [["ka","ca","ta","ta.","pa"],
 ["gha","jha","dha","dha.","bha"],
 ["na.","nya","nae","na","ma"],
 ["ya","ra","la","va"],
-["sha","sha.","sa","ha"]]
+["sha","sha.","sa","ha"],
+["a","ka","aa","kaa"],
+["i","ki","ii","kii"],
+["u","ku","uu","kuu"],
+["e","ke","ee","kee"],
+["o","ko","oo","koo"]]
 
 
 var kana_now = kana[0]
@@ -67,7 +79,7 @@ function showbox() {
 
 	if (checkedBoxes.length == 0) {alert("You are an idiot")} else {
 
-		kana_now = String();
+		kana_now = Array();
 		romanji_now = Array();
 		for (i = 0; i < checkedBoxes.length; i++) {
 			kana_now = kana_now.concat(kana[checkedBoxes[i].value])
@@ -76,6 +88,22 @@ function showbox() {
 		
 		change_image();
 	}
+}
+
+function vowel() {
+	$("#vowel").css("display", "table");
+	$("#consonant").css("display", "none");
+
+	$("#vowel_tab").css("background-color", "#eb8484");
+	$("#consonant_tab").css("background-color", "transparent");
+}
+
+function consonant() {
+	$("#vowel").css("display", "none");
+	$("#consonant").css("display", "table");
+
+	$("#vowel_tab").css("background-color", "transparent");
+	$("#consonant_tab").css("background-color", "#eb8484");
 }
 
 window.onload = showbox;

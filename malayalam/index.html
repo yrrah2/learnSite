@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -28,13 +28,13 @@
 		</ul>
 	</div>
 	<div id="content">
-		<div style="width: 900px; height: 400px;" class="center">
+		<div style="width: 800px; height: 400px;" class="center">
 			<span>
-				<div style="float: left; height: 400px; width: 300px;"></div>
-				<div style="float: left; height: 400px; width: 300px;">
+				<div style="float: left; height: 400px; width: 200px;"></div>
+				<div style="float: left; height: 300px; width: 400px; padding-top: 100px">
 					<span id="character">あ</span>
 				</div>
-				<div style="float: left; height: 400px; width: 300px;">
+				<div style="float: left; height: 400px; width: 200px;">
 					<div style="height:133px"></div>
 					<div id="answer"></div>
 					<div id="scolding"></div>
@@ -54,9 +54,15 @@
 			</span>
 		</div>
 
+		<div class="center" style="padding-bottom: 5px">
+			<span>
+				<span class="tab" id="consonant_tab" onclick="consonant()">consonants</span>
+				<span class="tab" id="vowel_tab" onclick="vowel()">vowels</span>
+			</span>
+		</div>
 
 
-<table class="center">
+<table id="consonant" class="center">
   <tr>
     <th>ക</th>
     <th>ഖ</th>
@@ -113,25 +119,52 @@
 		  </tr>
 		</table>
 
-<table class="center" style="display:none">
-  <tr>
-    <th class="tg-0lax">ക</th>
-    <th class="tg-0lax">കു</th>
-    <th class="tg-0lax">കു</th>
-    <th class="tg-0lax">കെ</th>
-    <th class="tg-0lax">കൊ</th>
-    <th class="tg-0lax">കൃ</th>
-    <th class="tg-73oq">കൢ</th>
-  </tr>
-  <tr>
-    <td class="tg-0lax">കാ</td>
-    <td class="tg-0lax">കീ</td>
-    <td class="tg-0lax">കൂ</td>
-    <td class="tg-0lax">കേ</td>
-    <td class="tg-0lax">കോ</td>
-    <td class="tg-0lax">കൄ</td>
-    <td class="tg-73oq">കൣ</td>
-  </tr>
+<table id="vowel" class="center" style="display:none">
+	<tr>
+		<th>അ</th>
+		<th>ഇ</th>
+		<th>ഉ</th>
+		<th>എ</th>
+		<th>ഒ</th>
+		<th>ഋ</th>
+		<th>ഌ</th>
+	</tr>
+	<tr>
+		<td>ക</td>
+		<td>കി</td>
+		<td>കു</td>
+		<td>കെ</td>
+		<td>കൊ</td>
+		<td>കൃ</td>
+		<td>കൢ</td>
+	</tr>
+	<tr>
+		<td>ആ</td>
+		<td>ഈ</td>
+		<td>ഊ</td>
+		<td>ഏ</td>
+		<td>ഓ</td>
+		<td>ൠ</td>
+		<td>ൡ</td>
+	</tr>
+	<tr>
+		<td>കാ</td>
+		<td>കീ</td>
+		<td>കൂ</td>
+		<td>കേ</td>
+		<td>കോ</td>
+		<td>കൄ</td>
+		<td>കൣ</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" class="checkbox" value="7" checked></td>
+		<td><input type="checkbox" class="checkbox" value="8"></td>
+		<td><input type="checkbox" class="checkbox" value="9"></td>
+		<td><input type="checkbox" class="checkbox" value="10"></td>
+		<td><input type="checkbox" class="checkbox" value="11"></td>
+		<td><input type="checkbox" class="checkbox" value="12"></td>
+		<td><input type="checkbox" class="checkbox" value="13"></td>
+	</tr>
 </table>
 
 		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
