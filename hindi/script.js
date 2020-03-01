@@ -3,16 +3,16 @@
 "गजडदब",
 "घझढधभ",
 "ङञणनम",
-"यरलवह",
-"शषस"]
+"यरलव",
+"शषसह"]
 
-var romanji = [["ka","ca","ta","ta","pa"],
-["kha","cha","tha","tha","pha"],
-["ga","ja","da","da","ba"],
-["gha","jha","dha","dha","bha"],
-["na","nya","na","na","ma"],
-["ya","ra","la","va","ha"],
-["sa","sa","sa"]]
+var romanji = [["ka","ca","ta","ta.","pa"],
+["kha","cha","tha","tha.","pha"],
+["ga","ja","da","da.","ba"],
+["gha","jha","dha","dha.","bha"],
+["na.","nya","nae","na","ma"],
+["ya","ra","la","va"],
+["sha","sha.","sa","ha"]]
 
 
 var kana_now = kana[0]
