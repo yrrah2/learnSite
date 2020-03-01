@@ -111,14 +111,17 @@ $("#typetext").keyup(function(event) {
 function showbox() {
 	var checkedBoxes = document.querySelectorAll('input.checkbox:checked');
 
-	kana_now = String();
-	romanji_now = Array();
-	for (i = 0; i < checkedBoxes.length; i++) {
-		kana_now = kana_now.concat(kana[checkedBoxes[i].value])
-		romanji_now = romanji_now.concat(romanji[checkedBoxes[i].value])
+	if (checkedBoxes.length == 0) {alert("You are an idiot")} else {
+
+		kana_now = String();
+		romanji_now = Array();
+		for (i = 0; i < checkedBoxes.length; i++) {
+			kana_now = kana_now.concat(kana[checkedBoxes[i].value])
+			romanji_now = romanji_now.concat(romanji[checkedBoxes[i].value])
+		}
+		
+		change_image();
 	}
-	
-	change_image();
 }
 
 function hiragana() {
