@@ -1,4 +1,4 @@
-var kana = ["あいうえお",
+﻿var kana = ["あいうえお",
 	"かきくけこ",
 	"がぎぐげご",
 	"さしすせそ",
@@ -137,3 +137,5 @@ function katakana() {
 	$("#katakana_tab").css("background-color", "#eb8484");
 
 }
+
+window.onload = showbox;

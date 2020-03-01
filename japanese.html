@@ -27,30 +27,37 @@
 		</ul>
 	</div>
 	<div id="content">
-
 		<div style="width: 900px; height: 400px;" class="center">
-			<div style="float: left; height: 400px; width: 300px;"></div>
-			<div style="float: left; height: 400px; width: 300px;">
-				<span id="character">あ</span>
-			</div>
-			<div style="float: left; height: 400px; width: 300px;">
-				<div style="height:133px"></div>
-				<div id="answer"></div>
-				<div id="scolding"></div>
-			</div>
+			<span>
+				<div style="float: left; height: 400px; width: 300px;"></div>
+				<div style="float: left; height: 400px; width: 300px;">
+					<span id="character">あ</span>
+				</div>
+				<div style="float: left; height: 400px; width: 300px;">
+					<div style="height:133px"></div>
+					<div id="answer"></div>
+					<div id="scolding"></div>
+				</div>
+			</span>
 		</div>
-		<div id="demo" class="center" style="width: 360px;">
-			<input  id="typetext" type="text" value="a">
-			<button id="jsstyle" onclick="check();">check answer</button>
+		<div id="demo" class="center">
+			<span>
+				<input  id="typetext" type="text" value="a">
+				<button id="jsstyle" onclick="check();">check answer</button>
+			</span>
 		</div>
-		<div class="center" style="width: 100px; text-align: center; padding-top: 20px; padding-bottom: 20px">
-			<span id="correct">0</span>
-			<span id="incorrect">0</span>
+		<div class="center" style="padding-top: 20px; padding-bottom: 20px">
+			<span>
+				<span id="correct">0</span>
+				<span id="incorrect">0</span>
+			</span>
 		</div>
 
-		<div class="center" style="width: 500px; text-align: center; padding-bottom: 5px;">
-			<span class="tab" id="hiragana_tab" onclick="hiragana()">hiragana</span>
-			<span class="tab" id="katakana_tab" onclick="katakana()">katakana</span>
+		<div class="center" style="padding-bottom: 5px;">
+			<span>
+				<span class="tab" id="hiragana_tab" onclick="hiragana()">hiragana</span>
+				<span class="tab" id="katakana_tab" onclick="katakana()">katakana</span>
+			</span>
 		</div>
 
 		<table id="hiragana" class="center">
@@ -263,8 +270,10 @@
 		  </tr>
 		</table>
 
-		<div class="center" style="width: 150px; padding-top: 20px; padding-bottom: 20px;">
-			<button onclick="showbox();">update choices</button>
+		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
+			<span>
+				<button onclick="showbox();">update choices</button>
+			</span>
 		</div>
 
 		<span id="display-output3"></span>
