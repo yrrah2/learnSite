@@ -78,6 +78,7 @@ b {
 	padding: 1em 0;
 	border-right: 1px dotted #ccc;
 	width: 200px;
+	position: absolute;
 }
 
 #nav ul {
