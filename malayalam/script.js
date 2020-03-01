@@ -54,7 +54,7 @@ function check()
 {
 	var textValue = document.getElementById('typetext').value;
 	
-	if ( romanji_now[rnd] == textValue ){ change_image(); correct++ }
+	if ( romanji_now[rnd].toUpperCase() == textValue.toUpperCase() ){ change_image(); correct++ }
 	else { document.getElementById("scolding").innerHTML = result; incorrect++; document.getElementById("answer").innerHTML = romanji_now[rnd] }
 
 
