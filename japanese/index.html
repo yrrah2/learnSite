@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<title>Display a random image.</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+
+</head>
+
+<body>
+	<div id="nav">
+		<ul>
+			<li><b>alphabets</b></li>
+			<li><a href="https://yrrah2.github.io/learnSite/japanese.html">japanese</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/korean.html">korean</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/russian.html">russian</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/greek.html">greek</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/arabic.html">arabic</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/hindi.html">hindi</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/thai.html">thai</a></li>
+			<li><b>alphabets</b></li>
+			<li><a href="https://yrrah2.github.io/learnSite/hanzi.html">chinese characters</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/koreanVocab.html">korean</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div style="width: 900px; height: 400px;" class="center">
+			<span>
+				<div style="float: left; height: 400px; width: 300px;"></div>
+				<div style="float: left; height: 400px; width: 300px;">
+					<span id="character">あ</span>
+				</div>
+				<div style="float: left; height: 400px; width: 300px;">
+					<div style="height:133px"></div>
+					<div id="answer"></div>
+					<div id="scolding"></div>
+				</div>
+			</span>
+		</div>
+		<div id="demo" class="center">
+			<span>
+				<input  id="typetext" type="text" value="a">
+				<button id="jsstyle" onclick="check();">check answer</button>
+			</span>
+		</div>
+		<div class="center" style="padding-top: 20px; padding-bottom: 20px">
+			<span>
+				<span id="correct">0</span>
+				<span id="incorrect">0</span>
+			</span>
+		</div>
+
+		<div class="center" style="padding-bottom: 5px;">
+			<span>
+				<span class="tab" id="hiragana_tab" onclick="hiragana()">hiragana</span>
+				<span class="tab" id="katakana_tab" onclick="katakana()">katakana</span>
+			</span>
+		</div>
+
+		<table id="hiragana" class="center">
+		  <tr>
+		    <th>あ</th>
+		    <th>か</th>
+		    <th>が</th>
+		    <th>さ</th>
+		    <th>ざ</th>
+		    <th>た</th>
+		    <th>だ</th>
+		    <th>な</th>
+		    <th>は</th>
+		    <th>ば</th>
+		    <th>ぱ</th>
+		    <th>ま</th>
+		    <th>や</th>
+		    <th>ら</th>
+		    <th>わ</th>
+		  </tr>
+		  <tr>
+		    <td>い</td>
+		    <td>き</td>
+		    <td>ぎ</td>
+		    <td>し</td>
+		    <td>じ</td>
+		    <td>ち</td>
+		    <td>ぢ</td>
+		    <td>に</td>
+		    <td>ひ</td>
+		    <td>び</td>
+		    <td>ぴ</td>
+		    <td>み</td>
+		    <td></td>
+		    <td>り</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>う</td>
+		    <td>く</td>
+		    <td>ぐ</td>
+		    <td>す</td>
+		    <td>ず</td>
+		    <td>つ</td>
+		    <td>づ</td>
+		    <td>ぬ</td>
+		    <td>ふ</td>
+		    <td>ぶ</td>
+		    <td>ぷ</td>
+		    <td>む</td>
+		    <td>ゆ</td>
+		    <td>る</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>え</td>
+		    <td>け</td>
+		    <td>げ</td>
+		    <td>せ</td>
+		    <td>ぜ</td>
+		    <td>て</td>
+		    <td>で</td>
+		    <td>ね</td>
+		    <td>へ</td>
+		    <td>べ</td>
+		    <td>ぺ</td>
+		    <td>め</td>
+		    <td></td>
+		    <td>れ</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>お</td>
+		    <td>こ</td>
+		    <td>ご</td>
+		    <td>そ</td>
+		    <td>ぞ</td>
+		    <td>と</td>
+		    <td>ど</td>
+		    <td>の</td>
+		    <td>ほ</td>
+		    <td>ぼ</td>
+		    <td>ぽ</td>
+		    <td>も</td>
+		    <td>よ</td>
+		    <td>ろ</td>
+		    <td>を</td>
+		  </tr>
+		  <tr>
+		    <td><input type="checkbox" class="checkbox" value="0" checked></td>
+		    <td><input type="checkbox" class="checkbox" value="1"></td>
+		    <td><input type="checkbox" class="checkbox" value="2"></td>
+		    <td><input type="checkbox" class="checkbox" value="3"></td>
+		    <td><input type="checkbox" class="checkbox" value="4"></td>
+		    <td><input type="checkbox" class="checkbox" value="5"></td>
+		    <td><input type="checkbox" class="checkbox" value="6"></td>
+		    <td><input type="checkbox" class="checkbox" value="7"></td>
+		    <td><input type="checkbox" class="checkbox" value="8"></td>
+		    <td><input type="checkbox" class="checkbox" value="9"></td>
+		    <td><input type="checkbox" class="checkbox" value="10"></td>
+		    <td><input type="checkbox" class="checkbox" value="11"></td>
+		    <td><input type="checkbox" class="checkbox" value="12"></td>
+		    <td><input type="checkbox" class="checkbox" value="13"></td>
+		    <td><input type="checkbox" class="checkbox" value="14"></td>
+		  </tr>
+		</table>
+
+		<table id="katakana" style="display: none" class="center">
+		  <tr>
+		    <th>ア</th>
+		    <th>カ</th>
+		    <th>ガ</th>
+		    <th>サ</th>
+		    <th>ザ</th>
+		    <th>タ</th>
+		    <th>ダ</th>
+		    <th>ナ</th>
+		    <th>ハ</th>
+		    <th>バ</th>
+		    <th>パ</th>
+		    <th>マ</th>
+		    <th>ヤ</th>
+		    <th>ラ</th>
+		    <th>ワ</th>
+		  </tr>
+		  <tr>
+		    <td>イ</td>
+		    <td>キ</td>
+		    <td>ギ</td>
+		    <td>シ</td>
+		    <td>ジ</td>
+		    <td>チ</td>
+		    <td>ヂ</td>
+		    <td>ニ</td>
+		    <td>ヒ</td>
+		    <td>ビ</td>
+		    <td>ピ</td>
+		    <td>ミ</td>
+		    <td></td>
+		    <td>リ</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>ウ</td>
+		    <td>ク</td>
+		    <td>グ</td>
+		    <td>ス</td>
+		    <td>ズ</td>
+		    <td>ツ</td>
+		    <td>ヅ</td>
+		    <td>ヌ</td>
+		    <td>フ</td>
+		    <td>ブ</td>
+		    <td>プ</td>
+		    <td>ム</td>
+		    <td>ユ</td>
+		    <td>ル</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>エ</td>
+		    <td>ケ</td>
+		    <td>ゲ</td>
+		    <td>セ</td>
+		    <td>ゼ</td>
+		    <td>テ</td>
+		    <td>デ</td>
+		    <td>ネ</td>
+		    <td>ヘ</td>
+		    <td>ベ</td>
+		    <td>ペ</td>
+		    <td>メ</td>
+		    <td></td>
+		    <td>レ</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>オ</td>
+		    <td>コ</td>
+		    <td>ゴ</td>
+		    <td>ソ</td>
+		    <td>ゾ</td>
+		    <td>ト</td>
+		    <td>ド</td>
+		    <td>ノ</td>
+		    <td>ホ</td>
+		    <td>ボ</td>
+		    <td>ポ</td>
+		    <td>モ</td>
+		    <td>ヨ</td>
+		    <td>ロ</td>
+		    <td>ヲ</td>
+		  </tr>
+		  <tr>
+		    <td><input type="checkbox" class="checkbox" value="15"></td>
+		    <td><input type="checkbox" class="checkbox" value="16"></td>
+		    <td><input type="checkbox" class="checkbox" value="17"></td>
+		    <td><input type="checkbox" class="checkbox" value="18"></td>
+		    <td><input type="checkbox" class="checkbox" value="19"></td>
+		    <td><input type="checkbox" class="checkbox" value="20"></td>
+		    <td><input type="checkbox" class="checkbox" value="21"></td>
+		    <td><input type="checkbox" class="checkbox" value="22"></td>
+		    <td><input type="checkbox" class="checkbox" value="23"></td>
+		    <td><input type="checkbox" class="checkbox" value="24"></td>
+		    <td><input type="checkbox" class="checkbox" value="25"></td>
+		    <td><input type="checkbox" class="checkbox" value="26"></td>
+		    <td><input type="checkbox" class="checkbox" value="27"></td>
+		    <td><input type="checkbox" class="checkbox" value="28"></td>
+		    <td><input type="checkbox" class="checkbox" value="29"></td>
+		  </tr>
+		</table>
+
+		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
+			<span>
+				<button onclick="showbox();">update choices</button>
+			</span>
+		</div>
+
+		<span id="display-output3"></span>
+	</div>
+
+</body>
+
+</html>
