@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<title>Display a random image.</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div id="nav">
+		<ul>
+			<li><b>alphabets</b></li>
+			<li><a href="https://yrrah2.github.io/learnSite/japanese/">japanese</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/korean/">korean</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/russian/">russian</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/greek/">greek</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/arabic/">arabic</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/hindi/">hindi</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/malayalam/">malayalam</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/thai/">thai</a></li>
+			<li><b>vocabulary</b></li>
+			<li><a href="https://yrrah2.github.io/learnSite/hanzi/">chinese characters</a></li>
+			<li><a href="https://yrrah2.github.io/learnSite/koreanVocab/">korean</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div style="width: 900px; height: 400px;" class="center">
+			<span>
+				<div style="float: left; height: 400px; width: 300px;"></div>
+				<div style="float: left; height: 400px; width: 300px;">
+			<span id="character">あ</span>
+		</div>
+
+		<div style="float: left; height: 400px; width: 300px;">
+			<div style="height:133px"></div>
+			<div id="answer"></div>
+			<div id="scolding"></div>
+		</div>
+
+		<div id="demo" class="center">
+			<span>
+				<input  id="typetext" type="text" value="a">
+				<button id="jsstyle" onclick="check();">check answer</button>
+			</span>
+		</div>
+
+		<div class="center" style="padding-top: 20px; padding-bottom: 20px">
+			<span>
+				<span id="correct">0</span>
+				<span id="incorrect">0</span>
+			</span>
+		</div>
+
+		<div class="center" style="padding-bottom: 5px;">
+			<span>
+				<span class="tab" id="final_tab" onclick="final_()">final</span>
+				<span class="tab" id="middle_tab" onclick="middle()">middle</span>
+				<span class="tab" id="initial_tab" onclick="initial()">initial</span>
+				<span class="tab" id="isolated_tab" onclick="isolated()">isolated</span>
+			</span>
+		</div>
+
+		<table id="final" style="display: none" class="center">
+			<tr>
+				<th>ـط</th>
+				<th>ـد</th>
+				<th>ـر</th>
+				<th>ـب</th>
+				<th>ـا</th>
+			</tr>
+			<tr>
+				<td>ـظ</td>
+				<td>ـذ</td>
+				<td>ـز</td>
+				<td>ـت</td>
+				<td>ـو</td>
+			</tr>
+			<tr>
+				<td>ـف</td>
+				<td>ـك</td>
+				<td>ـس</td>
+				<td>ـث</td>
+				<td>ـي</td>
+			</tr>
+			<tr>
+				<td>ـق</td>
+				<td>ـل</td>
+				<td>ـش</td>
+				<td>ـن</td>
+				<td>ـع</td>
+			</tr>
+			<tr>
+				<td>ـه</td>
+				<td>ـم</td>
+				<td>ـص</td>
+				<td>ـج</td>
+				<td>ـغ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>ـض</td>
+				<td>ـح</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>ـخ</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="checkbox" value="9"></td>
+				<td><input type="checkbox" class="checkbox" value="8"></td>
+				<td><input type="checkbox" class="checkbox" value="7"></td>
+				<td><input type="checkbox" class="checkbox" value="6"></td>
+				<td><input type="checkbox" class="checkbox" value="5"></td>
+			</tr>
+		</table>
+
+
+		<table id="middle" style="display: none" class="center">
+			<tr>
+				<th>ـطـ</th>
+				<th>ـد</th>
+				<th>ـر</th>
+				<th>ـبـ</th>
+				<th>ـا</th>
+			</tr>
+			<tr>
+				<td>ـظـ</td>
+				<td>ـذ</td>
+				<td>ـز</td>
+				<td>ـتـ</td>
+				<td>ـو</td>
+			</tr>
+			<tr>
+				<td>ـفـ</td>
+				<td>ـكـ</td>
+				<td>ـسـ</td>
+				<td>ـثـ</td>
+				<td>ـيـ</td>
+			</tr>
+			<tr>
+				<td>ـقـ</td>
+				<td>ـلـ</td>
+				<td>ـشـ</td>
+				<td>ـنـ</td>
+				<td>ـعـ</td>
+			</tr>
+			<tr>
+				<td>ـهـ</td>
+				<td>ـمـ</td>
+				<td>ـصـ</td>
+				<td>ـجـ</td>
+				<td>ـغـ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>ـضـ</td>
+				<td>ـحـ</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>ـخـ</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="checkbox" value="9"></td>
+				<td><input type="checkbox" class="checkbox" value="8"></td>
+				<td><input type="checkbox" class="checkbox" value="7"></td>
+				<td><input type="checkbox" class="checkbox" value="6"></td>
+				<td><input type="checkbox" class="checkbox" value="5"></td>
+			</tr>
+		</table>
+
+		<table id="initial" style="display: none" class="center">
+			<tr>
+				<th>طـ</th>
+				<th>د</th>
+				<th>ر</th>
+				<th>بـ</th>
+				<th>ا</th>
+			</tr>
+			<tr>
+				<td>ظـ</td>
+				<td>ذ</td>
+				<td>ز</td>
+				<td>تـ</td>
+				<td>و</td>
+			</tr>
+			<tr>
+				<td>فـ</td>
+				<td>كـ</td>
+				<td>سـ</td>
+				<td>ثـ</td>
+				<td>يـ</td>
+			</tr>
+			<tr>
+				<td>قـ</td>
+				<td>لـ</td>
+				<td>شـ</td>
+				<td>نـ</td>
+				<td>عـ</td>
+			</tr>
+			<tr>
+				<td>هـ</td>
+				<td>مـ</td>
+				<td>صـ</td>
+				<td>جـ</td>
+				<td>غـ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>ضـ</td>
+				<td>حـ</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>خـ</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="checkbox" value="9"></td>
+				<td><input type="checkbox" class="checkbox" value="8"></td>
+				<td><input type="checkbox" class="checkbox" value="7"></td>
+				<td><input type="checkbox" class="checkbox" value="6"></td>
+				<td><input type="checkbox" class="checkbox" value="5"></td>
+			</tr>
+		</table>
+
+		<table id="isolated" class="center">
+			<tr>
+				<th>ط</th>
+				<th>د</th>
+				<th>ر</th>
+				<th>ب</th>
+				<th>ا</th>
+			</tr>
+			<tr>
+				<td>ظ</td>
+				<td>ذ</td>
+				<td>ز</td>
+				<td>ت</td>
+				<td>و</td>
+			</tr>
+			<tr>
+				<td>ف</td>
+				<td>ك</td>
+				<td>س</td>
+				<td>ث</td>
+				<td>ي</td>
+			</tr>
+			<tr>
+				<td>ق</td>
+				<td>ل</td>
+				<td>ش</td>
+				<td>ن</td>
+				<td>ع</td>
+			</tr>
+			<tr>
+				<td>ه</td>
+				<td>م</td>
+				<td>ص</td>
+				<td>ج</td>
+				<td>غ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>ض</td>
+				<td>ح</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>خ</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="checkbox" value="4"></td>
+				<td><input type="checkbox" class="checkbox" value="3"></td>
+				<td><input type="checkbox" class="checkbox" value="2"></td>
+				<td><input type="checkbox" class="checkbox" value="1"></td>
+				<td><input type="checkbox" class="checkbox" value="0" checked></td>
+			</tr>
+		</table>
+
+
+		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
+		<span>
+		<button onclick="showbox();">update choices</button>
+		</span>
+		</div>
+
+		<span id="display-output3"></span>
+	</div>
+</body>
+
+</html>
