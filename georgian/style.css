@@ -2,26 +2,8 @@
 	height: 33%;
 }
 
-.center {
-	text-align: center;
-	margin: auto;
-}
-
-#character {
-	font-size: 30vmin;
-	font-weight: bold;
-	align-self: center;
-}
-
 #demo {
 	padding-bottom: 35px;
-}
-
-body {
-	margin: auto;
-	font-family: sans-serif;
-	font-size: 16px;
-
 }
 
 button {

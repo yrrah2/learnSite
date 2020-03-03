@@ -29,7 +29,7 @@
 	"ラリルレロ",
 	"ワヲ"]
 
-var romanji = [["a","i","u","e","o"],
+var latin = [["a","i","u","e","o"],
 	["ka","ki","ku","ke","ko",],
 	["ga","gi","gu","ge","go",],
 	["sa","shi","su","se","so",],
@@ -62,7 +62,7 @@ var romanji = [["a","i","u","e","o"],
 
 
 var kana_now = kana[0]
-var romanji_now = romanji[0];
+var romanji_now = latin[0];
 
 var rnd = 0;
 var result = "Wrong!";
@@ -117,27 +117,27 @@ function showbox() {
 		romanji_now = Array();
 		for (i = 0; i < checkedBoxes.length; i++) {
 			kana_now = kana_now.concat(kana[checkedBoxes[i].value])
-			romanji_now = romanji_now.concat(romanji[checkedBoxes[i].value])
+			romanji_now = romanji_now.concat(latin[checkedBoxes[i].value])
 		}
 		
 		change_image();
 	}
 }
 
-function hiragana() {
+function tab_1() {
 	$("#hiragana").css("display", "table");
 	$("#katakana").css("display", "none");
 	
-	$("#hiragana_tab").css("background-color", "#eb8484");
-	$("#katakana_tab").css("background-color", "transparent");
+	$("#tab_1").css("background-color", "#eb8484");
+	$("#tab_2").css("background-color", "transparent");
 }
 
-function katakana() {
+function tab_2() {
 	$("#hiragana").css("display", "none");
 	$("#katakana").css("display", "table");
 
-	$("#hiragana_tab").css("background-color", "transparent");
-	$("#katakana_tab").css("background-color", "#eb8484");
+	$("#tab_1").css("background-color", "transparent");
+	$("#tab_2").css("background-color", "#eb8484");
 
 }
 

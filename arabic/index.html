@@ -3,8 +3,9 @@
 
 <head>
 	<meta charset=utf-8 />
-	<title>Display a random image.</title>
+	<title>Arabic</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="script.js"></script>
 </head>
@@ -43,28 +44,25 @@
 	<div id="content">
 		<div style="width: 900px; height: 400px;" class="center">
 			<span>
-				<div style="float: left; height: 400px; width: 300px;"></div>
 				<div style="float: left; height: 400px; width: 300px;">
-			<span id="character">あ</span>
-		</div>
-
-		<div style="float: left; height: 400px; width: 300px;">
-			<div style="height:133px"></div>
-			<div id="answer"></div>
-			<div id="scolding"></div>
-		</div>
-
-		<div id="demo" class="center">
-			<span>
-				<input  id="typetext" type="text" value="a">
-				<button id="jsstyle" onclick="check();">check answer</button>
+					<div class="third"></div>
+					<div class="third">Correct: <span id="correct">0</span></div>
+					<div class="third">Incorrect: <span id="incorrect">0</span></div>
+				</div>
+				<div style="float: left; height: 400px; width: 300px;">
+					<span id="character">あ</span>
+				</div>
+				<div style="float: left; height: 400px; width: 300px;">
+					<div class="third"></div>
+					<div id="answer" class="third"></div>
+					<div id="scolding" class="third"></div>
+				</div>
 			</span>
 		</div>
-
-		<div class="center" style="padding-top: 20px; padding-bottom: 20px">
+		<div id="demo" class="center">
 			<span>
-				<span id="correct">0</span>
-				<span id="incorrect">0</span>
+				<input  id="typetext" type="text">
+				<button id="jsstyle" onclick="check();">check answer</button>
 			</span>
 		</div>
 
@@ -316,12 +314,10 @@
 
 
 		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
-		<span>
-		<button onclick="showbox();">update choices</button>
-		</span>
+			<span>
+				<button onclick="showbox();">update choices</button>
+			</span>
 		</div>
-
-		<span id="display-output3"></span>
 	</div>
 </body>
 

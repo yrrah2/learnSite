@@ -1,17 +1,21 @@
 ﻿var kana = [
-["աէեիըօոև"],
-["կտպծճռխսշֆ"],
-["քթփցչր"],
-["գդբձջլղզժվ"],
-["նմհյւ"]
+["աիըէեօոո"],
+["տպկծճլ"],
+["թփքցչռ"],
+["դբգձջր"],
+["սշֆղյ"],
+["զժվխ"],
+["նմւհ"]
 ]
 
 var romanji = [
-["a","e","e","i","i","o","o","u"],
-["k","t","p","ts","ch","r","kh","s","sh"],
-["k’","t’","p'","ts’","ch'","r’"],
-["g","d","b","dz","j","l","rkh","z","zh"],
-["n","m","h","y","w","q'","h"]
+["a","i","i","e","e","o","o"],
+["t","p","k","ts","ch","l"],
+["t’","p’","k’","ts’","ch'","r"],
+["d","b","g","dz","dzh","r’"],
+["s","sh","f","rkh","y"],
+["z","zh","v","kh"],
+["n","m","v","h"]
 ]
 
 
@@ -28,7 +32,7 @@ var incorrect = 0;
 function change_image() 
 {
 	document.getElementById("scolding").innerHTML = '';
-	document.getElementById("answer").innerHTML = ''
+	document.getElementById("answer").innerHTML = '';
 	
 	var current = rnd;
 	while (rnd === current) {
