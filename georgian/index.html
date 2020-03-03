@@ -42,18 +42,20 @@
 		</ul>
 	</div>
 	<div id="content">
-		<div style="width: 1000px; height: 400px;" class="center">
-			<span>
-				<div style="float: left; height: 400px; width: 300px;"></div>
-				<div style="float: left; height: 400px; width: 400px;">
-					<span id="character">あ</span>
-				</div>
-				<div style="float: left; height: 400px; width: 300px;">
-					<div style="height:133px"></div>
-					<div id="answer"></div>
-					<div id="scolding"></div>
-				</div>
-			</span>
+		<div style="width: 900px; height: 400px;" class="center">
+			<div style="float: left; height: 400px; width: 300px;">
+				<div class="third"></div>
+				<div class="third">Correct: <span id="correct">0</span></div>
+				<div class="third">Incorrect: <span id="incorrect">0</span></div>
+			</div>
+			<div style="float: left; height: 400px; width: 300px;">
+				<span id="character">あ</span>
+			</div>
+			<div style="float: left; height: 400px; width: 300px;">
+				<div class="third"></div>
+				<div id="scolding" class="third"></div>
+				<div id="answer" class="third"></div>
+			</div>
 		</div>
 		<div id="demo" class="center">
 			<span>
@@ -61,62 +63,71 @@
 				<button id="jsstyle" onclick="check();">check answer</button>
 			</span>
 		</div>
-		<div class="center" style="padding-top: 20px; padding-bottom: 20px">
-			<span>
-				<span id="correct">0</span>
-				<span id="incorrect">0</span>
-			</span>
-		</div>
 
-<table class="center">
-  <tr>
-    <th>Α α</th>
-    <th>Θ θ</th>
-    <th>Δ δ</th>
-    <th>Γ γ</th>
-  </tr>
-  <tr>
-    <td>Ε ε</td>
-    <td>Σ σ ς</td>
-    <td>Ζ ζ</td>
-    <td>Ξ ξ</td>
-  </tr>
-  <tr>
-    <td>Η η</td>
-    <td>Φ φ</td>
-    <td>Β β</td>
-    <td>Χ χ</td>
-  </tr>
-  <tr>
-    <td>Ι ι</td>
-    <td>Κ κ</td>
-    <td>Λ λ</td>
-    <td>Ψ ψ</td>
-  </tr>
-  <tr>
-    <td>Ο ο</td>
-    <td>Π π</td>
-    <td>Ρ ρ</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Υ υ</td>
-    <td>Τ τ</td>
-    <td>Ν ν</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Ω ω</td>
-    <td>Μ μ</td>
-    <td></td>
-    <td></td>
-  </tr>
-		<tr>
-		    <td><input type="checkbox" class="checkbox" value="0" checked></td>
-		    <td><input type="checkbox" class="checkbox" value="1"></td>
-		    <td><input type="checkbox" class="checkbox" value="2"></td>
-		    <td><input type="checkbox" class="checkbox" value="3"></td>
-		  </tr>
+		<table class="center">
+			<tr>
+				<th>ა</th>
+				<th>ქ</th>
+				<th>კ</th>
+				<th>გ</th>
+				<th>რ</th>
+			</tr>
+			<tr>
+				<td>ე</td>
+				<td>თ</td>
+				<td>ტ</td>
+				<td>დ</td>
+				<td>ლ</td>
+			</tr>
+			<tr>
+				<td>ი</td>
+				<td>ფ</td>
+				<td>პ</td>
+				<td>ბ</td>
+				<td>მ</td>
+			</tr>
+			<tr>
+				<td>ო</td>
+				<td>ც</td>
+				<td>წ</td>
+				<td>ძ</td>
+				<td>ნ</td>
+			</tr>
+			<tr>
+				<td>უ</td>
+				<td>ჩ</td>
+				<td>ჭ</td>
+				<td>ჯ</td>
+				<td>ვ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>შ</td>
+				<td></td>
+				<td>ჟ</td>
+				<td>ყ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>ხ</td>
+				<td></td>
+				<td>ღ</td>
+				<td>ჰ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>ს</td>
+				<td></td>
+				<td>ზ</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="checkbox" value="0" checked></td>
+				<td><input type="checkbox" class="checkbox" value="1"></td>
+				<td><input type="checkbox" class="checkbox" value="2"></td>
+				<td><input type="checkbox" class="checkbox" value="3"></td>
+				<td><input type="checkbox" class="checkbox" value="4"></td>
+			</tr>
 		</table>
 		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
 			<span>
