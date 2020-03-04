@@ -3,11 +3,12 @@
 
 <head>
 	<meta charset=utf-8 />
-	<title>Display a random image.</title>
+	<title>Korean</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="script.js"></script>
-
+	<script src="dictionary.js"></script>
+	<script src="../script.js"></script>
 </head>
 
 <body>
@@ -42,106 +43,102 @@
 		</ul>
 	</div>
 	<div id="content">
-		<div style="width: 900px; height: 400px;" class="center">
-			<span>
-				<div style="float: left; height: 400px; width: 300px;"></div>
-				<div style="float: left; height: 400px; width: 300px;">
+		<div class="center">
+			<div style="display: inline-block">
+				<div class="character_panel side_panel">
+					<div class="third"></div>
+					<div class="third">Correct: <span id="correct">0</span></div>
+					<div class="third">Incorrect: <span id="incorrect">0</span></div>
+				</div>
+				<div class="character_panel" id="main_panel">
 					<span id="character">あ</span>
 				</div>
-				<div style="float: left; height: 400px; width: 300px;">
-					<div style="height:133px"></div>
-					<div id="answer"></div>
-					<div id="scolding"></div>
+				<div class="character_panel side_panel">
+					<div class="third"></div>
+					<div class="third" id="answer"></div>
+					<div class="third" id="scolding"></div>
 				</div>
 			</span>
 		</div>
-		<div id="demo" class="center">
+
+		<div id="input_block" class="center">
 			<span>
 				<input  id="typetext" type="text" value="a">
 				<button id="jsstyle" onclick="check();">check answer</button>
 			</span>
 		</div>
-		<div class="center" style="padding-top: 20px; padding-bottom: 20px">
-			<span>
-				<span id="correct">0</span>
-				<span id="incorrect">0</span>
-			</span>
-		</div>
 
-
-<table class="center">
-  <tr>
-    <th>ㅏ</th>
-    <th>ㅑ</th>
-    <th>ㅘ</th>
-    <th>ㄱ</th>
-    <th>ㄲ</th>
-    <th>ㅋ</th>
-  </tr>
-  <tr>
-    <td>ㅓ</td>
-    <td>ㅕ</td>
-    <td>ㅝ</td>
-    <td>ㅈ</td>
-    <td>ㅉ</td>
-    <td>ㅊ</td>
-  </tr>
-  <tr>
-    <td>ㅐ</td>
-    <td>ㅒ</td>
-    <td>ㅙ</td>
-    <td>ㄷ</td>
-    <td>ㄸ</td>
-    <td>ㅌ</td>
-  </tr>
-  <tr>
-    <td>ㅔ</td>
-    <td>ㅖ</td>
-    <td>ㅞ</td>
-    <td>ㅂ</td>
-    <td>ㅃ</td>
-    <td>ㅍ</td>
-  </tr>
-  <tr>
-    <td>ㅗ</td>
-    <td>ㅛ</td>
-    <td>ㅚ</td>
-    <td>ㅅ</td>
-    <td>ㅆ</td>
-    <td>ㅎ</td>
-  </tr>
-  <tr>
-    <td>ㅜ</td>
-    <td>ㅠ</td>
-    <td>ㅟ</td>
-    <td>ㄴ</td>
-    <td>ㅇ</td>
-    <td>ㅁ</td>
-  </tr>
-  <tr>
-    <td>ㅡ</td>
-    <td>ㅣ</td>
-    <td>ㅢ</td>
-    <td>ㄹ</td>
-    <td></td>
-    <td></td>
-  </tr>
-		<tr>
-		    <td><input type="checkbox" class="checkbox" value="0" checked></td>
-		    <td><input type="checkbox" class="checkbox" value="1"></td>
-		    <td><input type="checkbox" class="checkbox" value="2"></td>
-		    <td><input type="checkbox" class="checkbox" value="3"></td>
-		    <td><input type="checkbox" class="checkbox" value="4"></td>
-		    <td><input type="checkbox" class="checkbox" value="5"></td>
-		  </tr>
+		<table class="center">
+			<tr>
+				<th>ㅏ</th>
+				<th>ㅑ</th>
+				<th>ㅘ</th>
+				<th>ㄱ</th>
+				<th>ㄲ</th>
+				<th>ㅋ</th>
+			</tr>
+			<tr>
+				<td>ㅓ</td>
+				<td>ㅕ</td>
+				<td>ㅝ</td>
+				<td>ㅈ</td>
+				<td>ㅉ</td>
+				<td>ㅊ</td>
+			</tr>
+			<tr>
+				<td>ㅐ</td>
+				<td>ㅒ</td>
+				<td>ㅙ</td>
+				<td>ㄷ</td>
+				<td>ㄸ</td>
+				<td>ㅌ</td>
+			</tr>
+			<tr>
+				<td>ㅔ</td>
+				<td>ㅖ</td>
+				<td>ㅞ</td>
+				<td>ㅂ</td>
+				<td>ㅃ</td>
+				<td>ㅍ</td>
+			</tr>
+			<tr>
+				<td>ㅗ</td>
+				<td>ㅛ</td>
+				<td>ㅚ</td>
+				<td>ㅅ</td>
+				<td>ㅆ</td>
+				<td>ㅎ</td>
+			</tr>
+			<tr>
+				<td>ㅜ</td>
+				<td>ㅠ</td>
+				<td>ㅟ</td>
+				<td>ㄴ</td>
+				<td>ㅇ</td>
+				<td>ㅁ</td>
+			</tr>
+			<tr>
+				<td>ㅡ</td>
+				<td>ㅣ</td>
+				<td>ㅢ</td>
+				<td>ㄹ</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" class="checkbox" value="0" checked></td>
+				<td><input type="checkbox" class="checkbox" value="1"></td>
+				<td><input type="checkbox" class="checkbox" value="2"></td>
+				<td><input type="checkbox" class="checkbox" value="3"></td>
+				<td><input type="checkbox" class="checkbox" value="4"></td>
+				<td><input type="checkbox" class="checkbox" value="5"></td>
+			</tr>
 		</table>
-		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
+		<div class="center" id="update_block">
 			<span>
 				<button onclick="showbox();">update choices</button>
 			</span>
 		</div>
-
-		<span id="display-output3"></span>
 	</div>
 
 </body>

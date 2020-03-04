@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="script.js"></script>
-
+	<script src="dictionary.js"></script>
+	<script src="../script.js"></script>
 </head>
 
 <body>
@@ -42,39 +42,41 @@
 				<li><a href="https://yrrah2.github.io/learnSite/mayan/">mayan</a></li>
 		</ul>
 	</div>
+
 	<div id="content">
-		<div style="width: 900px; height: 400px;" class="center">
-			<span>
-				<div style="float: left; height: 400px; width: 300px;">
+		<div class="center">
+			<div style="display: inline-block">
+				<div class="character_panel side_panel">
 					<div class="third"></div>
 					<div class="third">Correct: <span id="correct">0</span></div>
 					<div class="third">Incorrect: <span id="incorrect">0</span></div>
 				</div>
-				<div style="float: left; height: 400px; width: 300px;">
+				<div class="character_panel" id="main_panel">
 					<span id="character">あ</span>
 				</div>
-				<div style="float: left; height: 400px; width: 300px;">
+				<div class="character_panel side_panel">
 					<div class="third"></div>
-					<div class="third" id="scolding"></div>
 					<div class="third" id="answer"></div>
+					<div class="third" id="scolding"></div>
 				</div>
 			</span>
 		</div>
-		<div id="demo" class="center">
+
+		<div id="input_block" class="center">
 			<span>
-				<input  id="typetext" type="text" value="a">
+				<input  id="typetext" type="text">
 				<button id="jsstyle" onclick="check();">check answer</button>
 			</span>
 		</div>
 
-		<div class="center" style="padding-bottom: 5px;">
+		<div class="center" id="tab_block">
 			<span>
 				<span class="tab" id="tab_1" onclick="tab_1()">hiragana</span>
 				<span class="tab" id="tab_2" onclick="tab_2()">katakana</span>
 			</span>
 		</div>
 
-		<table id="hiragana" class="center">
+		<table id="table_1" class="center">
 		  <tr>
 		    <th>あ</th>
 		    <th>か</th>
@@ -179,7 +181,7 @@
 		  </tr>
 		</table>
 
-		<table id="katakana" style="display: none" class="center">
+		<table id="table_2" style="display: none" class="center">
 		  <tr>
 		    <th>ア</th>
 		    <th>カ</th>
@@ -284,15 +286,12 @@
 		  </tr>
 		</table>
 
-		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
+		<div class="center" id="update_block">
 			<span>
 				<button onclick="showbox();">update choices</button>
 			</span>
 		</div>
-
-		<span id="display-output3"></span>
 	</div>
-
 </body>
 
 </html>

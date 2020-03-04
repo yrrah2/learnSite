@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="script.js"></script>
+	<script src="dictionary.js"></script>
+	<script src="../script.js"></script>
 </head>
 
 <body>
@@ -42,40 +43,41 @@
 		</ul>
 	</div>
 	<div id="content">
-		<div style="width: 900px; height: 400px;" class="center">
-			<span>
-				<div style="float: left; height: 400px; width: 300px;">
+		<div class="center">
+			<div style="display: inline-block">
+				<div class="character_panel side_panel">
 					<div class="third"></div>
 					<div class="third">Correct: <span id="correct">0</span></div>
 					<div class="third">Incorrect: <span id="incorrect">0</span></div>
 				</div>
-				<div style="float: left; height: 400px; width: 300px;">
+				<div class="character_panel" id="main_panel">
 					<span id="character">あ</span>
 				</div>
-				<div style="float: left; height: 400px; width: 300px;">
+				<div class="character_panel side_panel">
 					<div class="third"></div>
-					<div id="answer" class="third"></div>
-					<div id="scolding" class="third"></div>
+					<div class="third" id="answer"></div>
+					<div class="third" id="scolding"></div>
 				</div>
 			</span>
 		</div>
-		<div id="demo" class="center">
+
+		<div id="input_block" class="center">
 			<span>
 				<input  id="typetext" type="text">
 				<button id="jsstyle" onclick="check();">check answer</button>
 			</span>
 		</div>
 
-		<div class="center" style="padding-bottom: 5px;">
+		<div id="tab_block" class="center">
 			<span>
-				<span class="tab" id="final_tab" onclick="final_()">final</span>
-				<span class="tab" id="middle_tab" onclick="middle()">middle</span>
-				<span class="tab" id="initial_tab" onclick="initial()">initial</span>
-				<span class="tab" id="isolated_tab" onclick="isolated()">isolated</span>
+				<span class="tab" id="tab_4" onclick="table_4()">final</span>
+				<span class="tab" id="tab_3" onclick="table_3()">middle</span>
+				<span class="tab" id="tab_2" onclick="table_2()">initial</span>
+				<span class="tab" id="tab_1" onclick="table_1()">isolated</span>
 			</span>
 		</div>
 
-		<table id="final" style="display: none" class="center">
+		<table id="table_4" style="display: none" class="center">
 			<tr>
 				<th>ـط</th>
 				<th>ـد</th>
@@ -134,8 +136,7 @@
 			</tr>
 		</table>
 
-
-		<table id="middle" style="display: none" class="center">
+		<table id="table_3" style="display: none" class="center">
 			<tr>
 				<th>ـطـ</th>
 				<th>ـد</th>
@@ -194,7 +195,7 @@
 			</tr>
 		</table>
 
-		<table id="initial" style="display: none" class="center">
+		<table id="table_2" style="display: none" class="center">
 			<tr>
 				<th>طـ</th>
 				<th>د</th>
@@ -253,7 +254,7 @@
 			</tr>
 		</table>
 
-		<table id="isolated" class="center">
+		<table id="table_1" class="center">
 			<tr>
 				<th>ط</th>
 				<th>د</th>
@@ -312,8 +313,7 @@
 			</tr>
 		</table>
 
-
-		<div class="center" style="padding-top: 20px; padding-bottom: 20px;">
+		<div class="center" id="update_block">
 			<span>
 				<button onclick="showbox();">update choices</button>
 			</span>
