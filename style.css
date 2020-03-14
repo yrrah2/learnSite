@@ -1,3 +1,8 @@
+#typetext {
+	z-index: 1;
+	position: relative;
+}
+
 .center {
 	text-align: center;
 	margin: auto;
