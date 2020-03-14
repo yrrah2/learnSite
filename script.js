@@ -7,6 +7,8 @@ var result = "Wrong!";
 var correct = 0;
 var incorrect = 0;
 
+var update = 0;
+
 
 function change_image() 
 {
@@ -19,13 +21,20 @@ function change_image()
 	};
 
 	document.getElementById("character").innerHTML = kana_now[rnd]
+	update = 0;
 };
 
 function check()
 {
 	var textValue = document.getElementById('typetext').value;
 	
-	if ( romanji_now[rnd].toUpperCase() == textValue.toUpperCase() ){ change_image(); correct++ }
+	if ( romanji_now[rnd].toUpperCase() == textValue.toUpperCase() ){
+		if (update == 1){
+			showbox();
+		}
+		change_image();
+		correct++ 
+	}
 	else { document.getElementById("scolding").innerHTML = result; incorrect++; document.getElementById("answer").innerHTML = romanji_now[rnd] }
 
 
@@ -54,9 +63,12 @@ function showbox() {
 			kana_now = kana_now.concat(script[checkedBoxes[i].value])
 			romanji_now = romanji_now.concat(latin[checkedBoxes[i].value])
 		}
-		
 		change_image();
 	}
+}
+
+function update_selection() {
+	update = 1;
 }
 
 function table_1() {
