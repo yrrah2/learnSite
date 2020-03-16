@@ -73,7 +73,7 @@ table {
 }
 
 td {
-  padding: 10px 0;
+	padding: 10px 0;
 }
 
 a {
@@ -84,7 +84,24 @@ b {
 	color: #363636;
 }
 
-#nav a, #nav b {
+.right {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+#menu {
+	color: #069;
+	background-color: #17a;
+	padding: 0.7ex;
+}
+
+#menu a, #menu b {
+	padding: 0.5ex 1ex;
+	color: #fff;
+}
+
+#menu a, #nav a, #nav b {
 	text-decoration: none;
 }
 
