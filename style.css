@@ -100,6 +100,7 @@ b {
 	border-right: 1px dotted #ccc;
 	width: 200px;
 	position: absolute;
+	z-index: 2;
 }
 
 #nav ul {
