@@ -1,49 +1,48 @@
-﻿var kana_now = script[0]
-var romanji_now = latin[0];
+var script_now = script[0];
+var latin_now = latin[0];
 
-var rnd = 0;
-var result = "Wrong!";
+var incorrect_message = "Wrong!";
 
 var correct = 0;
 var incorrect = 0;
 
+var rnd = 0;
 var update = 0;
 
-
-function change_image() 
+function new_character() 
 {
-	document.getElementById("scolding").innerHTML = '';
-	document.getElementById("answer").innerHTML = ''
+	document.getElementById("scolding").innerHTML = '';				// Remove the scolding message
+	document.getElementById("answer").innerHTML = ''				// Remove the shown answer
 	
-	var current = rnd;
-	while (rnd === current) {
-		rnd = Math.floor(Math.random() * kana_now.length);
+	var current = rnd;								// Remember the current character
+	while (rnd === current) {							// Make sure the character isn't the same one
+		rnd = Math.floor(Math.random() * script_now.length);			// Choose a random character
 	};
 
-	document.getElementById("character").innerHTML = kana_now[rnd]
-	update = 0;
+	document.getElementById("character").innerHTML = script_now[rnd]		// Show the chosen character
 };
 
 function check()
 {
-	var textValue = document.getElementById('typetext').value;
+	var textValue = document.getElementById('typetext').value; 			// Get the answer from the input box
 	
-	if ( romanji_now[rnd].toUpperCase() == textValue.toUpperCase() ){
-		if (update == 1){
-			showbox();
-		}
-		change_image();
-		correct++ 
+	if ( latin_now[rnd].toUpperCase() == textValue.toUpperCase() ){ 		// Check if the answer is correct, case independent
+		if ( update == 1 ) { showbox(); update = 0 }; 				// If the selection of characters has changed, update them
+		new_character(); 							// Show a new character from the selection
+		correct++ ; 								// Increase number of correct answers
+	} else { 
+		document.getElementById("scolding").innerHTML = incorrect_message;	// Tell the user they got the answer wrong
+		incorrect++;								// Increase number of incorrect answers
+		document.getElementById("answer").innerHTML = latin_now[rnd];		// Show the correct answer
 	}
-	else { document.getElementById("scolding").innerHTML = result; incorrect++; document.getElementById("answer").innerHTML = romanji_now[rnd] }
 
+	document.getElementById("correct").innerHTML = correct;				// Update the correct score
+	document.getElementById("incorrect").innerHTML = incorrect;			// Update the incorrect score
 
-	document.getElementById("correct").innerHTML = correct;
-	document.getElementById("incorrect").innerHTML = incorrect;
-
-	document.getElementById("typetext").value = '';
+	document.getElementById("typetext").value = '';					// Remove the text from the input box
 };
 
+// Runs check() if the enter key is pressed while typing an answer
 $(document).ready(function() {
 $("#typetext").keyup(function(event) {
 	if (event.keyCode == 13) {
@@ -53,24 +52,21 @@ $("#typetext").keyup(function(event) {
 });
 
 function showbox() {
-	var checkedBoxes = document.querySelectorAll('input.checkbox:checked');
+	var checkedBoxes = document.querySelectorAll('input.checkbox:checked');		// Get all checked checkboxes
 
-	if (checkedBoxes.length == 0) {alert("You are an idiot")} else {
-
-		kana_now = script_type;
-		romanji_now = Array();
-		for (i = 0; i < checkedBoxes.length; i++) {
-			kana_now = kana_now.concat(script[checkedBoxes[i].value])
-			romanji_now = romanji_now.concat(latin[checkedBoxes[i].value])
+	if (checkedBoxes.length == 0) { alert("You are an idiot") } else {		// Make sure at least one is checked
+		script_now = script_type;						// Empty the current character selection
+		latin_now = Array();							// Empty the current latin transliterations
+		for (i = 0; i < checkedBoxes.length; i++) {				// For each of the checked checkboxes
+			script_now = script_now.concat(script[checkedBoxes[i].value])	// Add the relevant characters to the character selection
+			latin_now = latin_now.concat(latin[checkedBoxes[i].value])	// Add the relevant transliterations to the latin selection
 		}
-		change_image();
 	}
 }
 
-function update_selection() {
-	update = 1;
-}
+function update_selection() { update = 1 };						// Update the character selection after the next correct answer
 
+// Switch to table 1, highlight the table 1 tab
 function table_1() {
 	$("#table_1").css("display", "table");
 	$("#table_2").css("display", "none");
@@ -81,9 +77,9 @@ function table_1() {
 	$("#tab_2").css("background-color", "transparent");
 	$("#tab_3").css("background-color", "transparent");
 	$("#tab_4").css("background-color", "transparent");
+}
 
-	}
-
+// Switch to table 2, highlight the table 2 tab
 function table_2() {
 	$("#table_1").css("display", "none");
 	$("#table_2").css("display", "table");
@@ -94,9 +90,9 @@ function table_2() {
 	$("#tab_2").css("background-color", "#eb8484");
 	$("#tab_3").css("background-color", "transparent");
 	$("#tab_4").css("background-color", "transparent");
+}
 
-	}
-
+// Switch to table 3, highlight the table 3 tab
 function table_3() {
 	$("#table_1").css("display", "none");
 	$("#table_2").css("display", "none");
@@ -107,8 +103,9 @@ function table_3() {
 	$("#tab_2").css("background-color", "transparent");
 	$("#tab_3").css("background-color", "#eb8484");
 	$("#tab_4").css("background-color", "transparent");
-	}
+}
 
+// Switch to table 4, highlight the table 4 tab
 function table_4() {
 	$("#table_1").css("display", "none");
 	$("#table_2").css("display", "none");
@@ -121,4 +118,5 @@ function table_4() {
 	$("#tab_4").css("background-color", "#eb8484");
 }
 
-window.onload = showbox;
+window.onload = showbox;								// Change the selection of characters to whatever is selected
+new_character();									// Generate a character
