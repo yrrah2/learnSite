@@ -101,6 +101,10 @@ b {
 	color: #fff;
 }
 
+#menu a:hover {
+	background-color: #069;
+}
+
 #menu a, #nav a, #nav b {
 	text-decoration: none;
 }
