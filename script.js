@@ -1,4 +1,4 @@
-checkedvar script_now = script[0];
+var script_now = script[0];
 var latin_now = latin[0];
 
 var incorrect_message = "Wrong!";
