@@ -42,7 +42,7 @@ var latin = [
 ["ta","chi","tsu","te","to",],
 ["da","ji","dzu","de","do",],
 ["na","ni","nu","ne","no",],
-["ha","hi","hu","he","ho",],
+["ha","hi","fu","he","ho",],
 ["ba","bi","bu","be","bo",],
 ["pa","pi","pu","pe","po",],
 ["ma","mi","mu","me","mo",],
