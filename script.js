@@ -24,35 +24,35 @@ function new_character()
 
 function check()
 {
-	var textValue = document.getElementById('typetext').value; 			// Get the answer from the input box
+	var textValue = $('#typetext').val(); 						// Get the answer from the input box
 	
 	if ( latin_now[rnd].toUpperCase() == textValue.toUpperCase() ){ 		// Check if the answer is correct, case independent
 		if ( update == 1 ) { showbox(); update = 0 }; 				// If the selection of characters has changed, update them
 		new_character(); 							// Show a new character from the selection
 		correct++ ; 								// Increase number of correct answers
 	} else { 
-		document.getElementById("scolding").innerHTML = incorrect_message;	// Tell the user they got the answer wrong
+		$("#scolding").text(incorrect_message);					// Tell the user they got the answer wrong
+		$("#answer").text(latin_now[rnd]);					// Show the correct answer
 		incorrect++;								// Increase number of incorrect answers
-		document.getElementById("answer").innerHTML = latin_now[rnd];		// Show the correct answer
 	}
 
-	document.getElementById("correct").innerHTML = correct;				// Update the correct score
-	document.getElementById("incorrect").innerHTML = incorrect;			// Update the incorrect score
+	$("#correct").text(correct);							// Update the correct score
+	$("#incorrect").text(incorrect);						// Update the incorrect score
 
-	document.getElementById("typetext").value = '';					// Remove the text from the input box
+	$("#typetext").val('');								// Remove the text from the input box
 };
 
 // Runs check() if the enter key is pressed while typing an answer
 $(document).ready(function() {
-$("#typetext").keyup(function(event) {
-	if (event.keyCode == 13) {
-		check();
-	}
-});
+	$("#typetext").keyup(function(event) {
+		if (event.keyCode == 13) {
+			check();
+		}
+	});
 });
 
 function showbox() {
-	var checkedBoxes = document.querySelectorAll('input.checkbox:checked');		// Get all checked checkboxes
+	var checkedBoxes = $("input.checkbox:checked");					// Get all checked checkboxes
 
 	if (checkedBoxes.length == 0) { alert("You are an idiot") } else {		// Make sure at least one is checked
 		script_now = script_type;						// Empty the current character selection
