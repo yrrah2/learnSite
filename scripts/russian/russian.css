@@ -1,0 +1,12 @@
+#character {
+	font-size: 30vmin;
+}
+
+#main_panel {
+	width: 300px;
+	position: relative;
+}
+
+.side_panel {
+	width: 300px;
+}
