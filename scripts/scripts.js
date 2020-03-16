@@ -72,7 +72,7 @@ function table_1() {
 	$("#table_3").css("display", "none");
 	$("#table_4").css("display", "none");
 	
-	$("#tab_1").css("background-color", "#eb8484");
+	$("#tab_1").css("background-color", "#a1dacb");
 	$("#tab_2").css("background-color", "transparent");
 	$("#tab_3").css("background-color", "transparent");
 	$("#tab_4").css("background-color", "transparent");
@@ -86,7 +86,7 @@ function table_2() {
 	$("#table_4").css("display", "none");
 	
 	$("#tab_1").css("background-color", "transparent");
-	$("#tab_2").css("background-color", "#eb8484");
+	$("#tab_2").css("background-color", "#a1dacb");
 	$("#tab_3").css("background-color", "transparent");
 	$("#tab_4").css("background-color", "transparent");
 }
@@ -100,7 +100,7 @@ function table_3() {
 	
 	$("#tab_1").css("background-color", "transparent");
 	$("#tab_2").css("background-color", "transparent");
-	$("#tab_3").css("background-color", "#eb8484");
+	$("#tab_3").css("background-color", "#a1dacb");
 	$("#tab_4").css("background-color", "transparent");
 }
 
@@ -114,7 +114,7 @@ function table_4() {
 	$("#tab_1").css("background-color", "transparent");
 	$("#tab_2").css("background-color", "transparent");
 	$("#tab_3").css("background-color", "transparent");
-	$("#tab_4").css("background-color", "#eb8484");
+	$("#tab_4").css("background-color", "#a1dacb");
 }
 
 function pageload() { 

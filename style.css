@@ -14,11 +14,11 @@ td {
 }
 
 a {
-	color: #005386;
+	color: #366494;
 }
 
-b {
-	color: #363636;
+#nav b {
+	color: #1e2123;
 }
 
 .right {
@@ -29,7 +29,7 @@ b {
 
 #menu {
 	color: #069;
-	background-color: #17a;
+	background-color: #303f6e;
 	padding: 0.7ex;
 }
 
