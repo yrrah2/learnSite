@@ -1,4 +1,4 @@
-var script_now = script[0];
+checkedvar script_now = script[0];
 var latin_now = latin[0];
 
 var incorrect_message = "Wrong!";
@@ -30,14 +30,13 @@ function check()
 		if ( update == 1 ) { showbox(); update = 0 }; 				// If the selection of characters has changed, update them
 		new_character(); 							// Show a new character from the selection
 		correct++ ; 								// Increase number of correct answers
+		$("#correct").text(correct);						// Update the correct score
 	} else { 
 		$("#scolding").text(incorrect_message);					// Tell the user they got the answer wrong
 		$("#answer").text(latin_now[rnd]);					// Show the correct answer
 		incorrect++;								// Increase number of incorrect answers
+		$("#incorrect").text(incorrect);					// Update the incorrect score
 	}
-
-	$("#correct").text(correct);							// Update the correct score
-	$("#incorrect").text(incorrect);						// Update the incorrect score
 
 	$("#typetext").val('');								// Remove the text from the input box
 };
