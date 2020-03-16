@@ -11,15 +11,15 @@ var update = 0;
 
 function new_character() 
 {
-	document.getElementById("scolding").innerHTML = '';				// Remove the scolding message
-	document.getElementById("answer").innerHTML = ''				// Remove the shown answer
+	$("#scolding").text('');							// Remove the scolding message
+	$("#answer").text('');								// Remove the shown answer
 	
 	var current = rnd;								// Remember the current character
 	while (rnd === current) {							// Make sure the character isn't the same one
 		rnd = Math.floor(Math.random() * script_now.length);			// Choose a random character
 	};
 
-	document.getElementById("character").innerHTML = script_now[rnd]		// Show the chosen character
+	$("#character").text(script_now[rnd]);						// Show the chosen character
 };
 
 function check()
@@ -118,5 +118,9 @@ function table_4() {
 	$("#tab_4").css("background-color", "#eb8484");
 }
 
-window.onload = showbox;								// Change the selection of characters to whatever is selected
-new_character();									// Generate a character
+function pageload() { 
+	showbox();
+	new_character();
+}
+
+window.onload = pageload;
