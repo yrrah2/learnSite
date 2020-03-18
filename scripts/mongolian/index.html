@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<title>mongolian</title>
+	<link rel="stylesheet" href="arabic.css">
+	<link rel="stylesheet" href="../scripts.css">
+	<link rel="stylesheet" href="../../style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="dictionary.js"></script>
+	<script src="../scripts.js"></script>
+</head>
+
+<body>
+	<div id="menu">
+		<a href="https://yrrah2.github.io/learnSite/">home</a>
+		<a href="https://yrrah2.github.io/learnSite/scripts/"><b>scripts</b></a>
+		<a href="https://yrrah2.github.io/learnSite/geography/">geography</a>
+		<a href="https://yrrah2.github.io/learnSite/history/">history</a>
+		<span class="right">
+			<a href="https://github.com/yrrah2/learnSite">source code</a>
+		</span>
+	</div>
+	<div id="nav">
+		<ul>
+			<li><b>europe</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/russian/">russian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/greek/">greek</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/georgian/">georgian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/armenian/">armenian</a></li>
+			<li><b>east asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/japanese/">japanese</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/korean/">korean</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/mongolian/">mongolian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/tibetan/">tibetan</a></li>
+			<li><b>south east asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/thai/">thai</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/burmese/">burmese</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/lao/">lao</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/khmer/">khmer</a></li>
+			<li><b>south asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/hindi/">hindi</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/bengali/">bengali</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/malayalam/">malayalam</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/tamil/">tamil</a></li>
+			<li><b>west asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/arabic/">arabic</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/hebrew/">hebrew</a></li>
+			<li><b>also</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/mayan/">egyptian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/mayan/">mayan</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="center">
+			<div style="display: inline-block">
+				<div class="character_panel side_panel">
+					<div class="third"></div>
+					<div class="third">Correct: <span id="correct">0</span></div>
+					<div class="third">Incorrect: <span id="incorrect">0</span></div>
+				</div>
+				<div class="character_panel" id="main_panel">
+					<span id="character">あ</span>
+				</div>
+				<div class="character_panel side_panel">
+					<div class="third"></div>
+					<div class="third" id="answer"></div>
+					<div class="third" id="scolding"></div>
+				</div>
+			</span>
+		</div>
+
+		<div id="input_block" class="center">
+			<span>
+				<input  id="typetext" type="text">
+				<button id="jsstyle" onclick="check();">check answer</button>
+			</span>
+		</div>
+
+		<div id="tab_block" class="center">
+			<span>
+				<span class="tab" id="tab_1" onclick="table_1()">isolated</span>
+				<span class="tab" id="tab_2" onclick="table_2()">initial</span>
+				<span class="tab" id="tab_3" onclick="table_3()">middle</span>
+				<span class="tab" id="tab_4" onclick="table_4()">final</span>
+			</span>
+		</div>
+
+		<table id="table_1" class="center">
+			<tr>
+				<th>ᠠ</th>
+				<th>ᠲ</th>
+				<th>ᠳ</th>
+				<th>ᠷ</th>
+			</tr>
+			<tr>
+				<td>ᠡ</td>
+				<td>ᠪ</td>
+				<td>ᠫ</td>
+				<td>ᠯ</td>
+			</tr>
+			<tr>
+				<td>ᠧ</td>
+				<td>ᠬ</td>
+				<td>ᠭ</td>
+				<td>ᠵ</td>
+			</tr>
+			<tr>
+				<td>ᠢ</td>
+				<td>ᠰ</td>
+				<td>ᠱ</td>
+				<td>ᠴ</td>
+			</tr>
+			<tr>
+				<td>ᠤ</td>
+				<td>ᠨ</td>
+				<td>ᠩ</td>
+				<td>ᠮ</td>
+			</tr>
+			<tr>
+				<td>ᠦ</td>
+				<td></td>
+				<td></td>
+				<td>ᠶ</td>
+			</tr>
+			<tr>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="0" checked></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="1"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="2"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="3"></td>
+			</tr>
+		</table>
+
+		<table id="table_2" style="display: none" class="center">
+			<tr>
+				<th>ᠠ‍</th>
+				<th>ᠲ᠊</th>
+				<th></th>
+				<th>ᠷ᠊</th>
+			</tr>
+			<tr>
+				<td>ᠡ‍</td>
+				<td>ᠪ᠊</td>
+				<td>ᠫ᠊</td>
+				<td>ᠯ᠊</td>
+			</tr>
+			<tr>
+				<td>ᠧ᠊</td>
+				<td>ᠬ᠊</td>
+				<td>ᠭ᠊</td>
+				<td>ᠵ᠊</td>
+			</tr>
+			<tr>
+				<td>ᠢ᠊</td>
+				<td>ᠰ᠊</td>
+				<td>ᠱ᠊</td>
+				<td>ᠴ᠊</td>
+			</tr>
+			<tr>
+				<td>ᠤ᠊</td>
+				<td>ᠨ᠊</td>
+				<td>ᠩ᠊</td>
+				<td>ᠮ᠊</td>
+			</tr>
+			<tr>
+				<td>ᠦ᠊</td>
+				<td></td>
+				<td></td>
+				<td>ᠶ᠊</td>
+			</tr>
+			<tr>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="4"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="5"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="6"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="7"></td>
+			</tr>
+		</table>
+
+		<table id="table_3" style="display: none" class="center">
+			<tr>
+				<th>‍ᠠ‍</th>
+				<th>᠊ᠲ᠊</th>
+				<th>᠊ᠳ᠊</th>
+				<th>᠊ᠷ᠊</th>
+			</tr>
+			<tr>
+				<td>‍ᠡ‍</td>
+				<td>᠊ᠪ᠊</td>
+				<td>᠊ᠫ᠊</td>
+				<td>᠊ᠯ᠊</td>
+			</tr>
+			<tr>
+				<td>᠊ᠧ᠊</td>
+				<td>᠊ᠬ᠊</td>
+				<td>᠊ᠭ᠊</td>
+				<td>᠊ᠵ᠊</td>
+			</tr>
+			<tr>
+				<td>᠊ᠢ᠊</td>
+				<td>᠊ᠰ᠊</td>
+				<td>᠊ᠱ᠊</td>
+				<td>᠊ᠴ᠊</td>
+			</tr>
+			<tr>
+				<td>᠊ᠤ᠊</td>
+				<td>᠊ᠨ᠊</td>
+				<td>᠊ᠩ᠊</td>
+				<td>᠊ᠮ᠊</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>᠊ᠶ᠊</td>
+			</tr>
+			<tr>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="8"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="9"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="10"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="11"></td>
+			</tr>
+		</table>
+
+		<table id="table_4" style="display: none" class="center">
+			<tr>
+				<th>‍ᠠ</th>
+				<th>᠊ᠲ</th>
+				<th>᠊ᠳ</th>
+				<th>᠊ᠷ</th>
+			</tr>
+			<tr>
+				<td>‍ᠡ</td>
+				<td>᠊ᠪ</td>
+				<td>᠊ᠫ</td>
+				<td>᠊ᠯ</td>
+			</tr>
+			<tr>
+				<td>᠊ᠧ</td>
+				<td></td>
+				<td>᠊ᠭ</td>
+				<td>᠊ᠵ</td>
+			</tr>
+			<tr>
+				<td>᠊ᠢ</td>
+				<td>᠊ᠰ</td>
+				<td>᠊ᠱ</td>
+				<td>᠊ᠴ</td>
+			</tr>
+			<tr>
+				<td>᠊ᠤ</td>
+				<td>᠊ᠨ</td>
+				<td>᠊ᠩ</td>
+				<td>᠊ᠮ</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>᠊ᠶ</td>
+			</tr>
+			<tr>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="12"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="13"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="14"></td>
+				<td><input onclick="update_selection();" type="checkbox" class="checkbox" value="15"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>
