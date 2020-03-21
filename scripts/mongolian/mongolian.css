@@ -1,5 +1,6 @@
 #character {
 	font-size: 30vmin;
+	writing-mode: vertical-lr;
 }
 
 #main_panel {
