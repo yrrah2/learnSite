@@ -11,3 +11,7 @@
 .side_panel {
 	width: 300px;
 }
+
+th {
+	writing-mode: vertical-lr;
+}
