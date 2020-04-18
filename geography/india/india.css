@@ -1,0 +1,29 @@
+#character {
+	font-size: 30vmin;
+}
+
+#main_panel {
+	width: 400px;
+	position: relative;
+}
+
+.side_panel {
+	width: 300px;
+}
+
+
+	.st0{fill:#808080;stroke:#FFFFFF;stroke-width:2;}
+	.st1{fill:#808080;stroke:#FFFFFF;}
+	.st2{fill:#C12838;stroke:#FFFFFF;stroke-width:2;}
+	.st3{fill:#808080;}
+	.st4{fill:none;}
+	.st5{fill:#B3B4C1;}
+	/*.st6{fill:#F9F9F9;}*/
+	.st6{fill:#FFFFFF;}
+	.st7{fill:none;stroke:#AAAAAA;stroke-width:0.5;}
+	#path3799{fill:#FFFFFF;}
+
+
+#jammu_and_kashmir {
+	fill: #C12838;
+}
