@@ -3,7 +3,7 @@
 }
 
 #main_panel {
-	width: 400px;
+	width: 593px;
 	position: relative;
 }
 
@@ -11,6 +11,13 @@
 	width: 300px;
 }
 
+.region{
+	fill: #b5b5b5;
+}
+
+.region_stroke{
+	stroke: #6a6a6a;
+}
 
 	.st0{fill:#808080;stroke:#FFFFFF;stroke-width:2;}
 	.st1{fill:#808080;stroke:#FFFFFF;}
@@ -22,8 +29,3 @@
 	.st6{fill:#FFFFFF;}
 	.st7{fill:none;stroke:#AAAAAA;stroke-width:0.5;}
 	#path3799{fill:#FFFFFF;}
-
-
-#jammu_and_kashmir {
-	fill: #C12838;
-}

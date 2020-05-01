@@ -18,16 +18,18 @@ var script = [
 ];
 
 var latin = [
-["ka","ca","ta","ta.","pa"],
-["kha","cha","tha","tha.","pha"],
-["ga","ja","da","da.","ba"],
-["gha","jha","dha","dha.","bha"],
-["na.","nya","nae","na","ma"],
+["ka","ca","ta.","ta","pa"],
+["kha","cha","tha.","tha","pha"],
+["ga","ja","da.","da","ba"],
+["gha","jha","dha.","dha","bha"],
+["nga","nya","na.","na","ma"],
 ["ya","ra","la","va"],
 ["sha","sha.","sa","ha"],
 ["a","ka","aa","kaa"],
 ["i","ki","ii","kii"],
 ["u","ku","uu","kuu"],
 ["e","ke","ee","kee"],
-["o","ko","oo","koo"]
+["o","ko","oo","koo"],
+["ri", "kri", "rri", "krri"],
+["li", "kli", "lli", "klli"]
 ];

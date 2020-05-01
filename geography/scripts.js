@@ -16,10 +16,13 @@ function new_character()
 	
 	var current = rnd;								// Remember the current character
 	while (rnd === current) {							// Make sure the character isn't the same one
-		rnd = Math.floor(Math.random() * script_now.length);			// Choose a random character
+		rnd = Math.floor(Math.random() * script_now.length);			// Choose a random state
 	};
-
-	$("#character").text(script_now[rnd]);						// Show the chosen character
+	
+	$('.' + script_now[current]).css("fill", "#b5b5b5");				// Colour the chosen state red
+	$('.' + script_now[current] + "_stroke").css("stroke", "#6a6a6a");		// Colour the circle of the chosen state red
+	$('.' + script_now[rnd]).css("fill", "#C12838");				// Colour the chosen state red
+	$('.' + script_now[rnd] + "_stroke").css("stroke", "#C12838");			// Colour the circle of the chosen state red
 };
 
 function check()
@@ -27,8 +30,8 @@ function check()
 	var textValue = $('#typetext').val(); 						// Get the answer from the input box
 	
 	if ( latin_now[rnd].toUpperCase() == textValue.toUpperCase() ){ 		// Check if the answer is correct, case independent
-		if ( update == 1 ) { showbox(); update = 0 }; 				// If the selection of characters has changed, update them
 		new_character(); 							// Show a new character from the selection
+		if ( update == 1 ) { showbox(); update = 0 }; 				// If the selection of characters has changed, update them
 		correct++ ; 								// Increase number of correct answers
 		$("#correct").text(correct);						// Update the correct score
 	} else { 
@@ -118,8 +121,8 @@ function table_4() {
 }
 
 function pageload() { 
-	showbox();
-	new_character();
+	showbox();									// Check all the checkboxes
+	new_character();								// Generate a new character
 }
 
 window.onload = pageload;
