@@ -1,18 +1,20 @@
 var script_type = Array();
 
 var script = [
-["yunnan", "guangxi", "guangdong", "sichuan", "hong_kong", "macau", "taiwan"],
-["tibet", "xinjiang", "qinhai", "gansu", "ningxia"],
-["test"],
-["test"],
-["test"]
+["beijing", "tianjin", "hebei", "shanxi"],
+["liaoning", "jilin", "heilongjiang", "inner_mongolia"],
+["shanghai", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "taiwan"]
+["henan", "hubei", "hunan", "guangdong", "guangxi", "hainan", "hong_kong", "macau"],
+["sichuan", "guizhou", "yunnan", "chongqing", "tibet"],
+["shaanxi", "gansu", "qinghai", "ningxia", "xinjiang"]
 ];
 
 
 var latin = [
-["yunnan", "guangxi", "guangdong", "sichuan", "hong kong", "macau", "taiwan"],
-["tibet", "xinjiang", "qinhai", "gansu", "ningxia"],
-["test"],
-["test"],
-["test"]
+["beijing", "tianjin", "hebei", "shanxi"],
+["liaoning", "jilin", "heilongjiang", "inner mongolia"],
+["shanghai", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "taiwan"]
+["henan", "hubei", "hunan", "guangdong", "guangxi", "hainan", "hong kong", "macau"],
+["sichuan", "guizhou", "yunnan", "chongqing", "tibet"],
+["shaanxi", "gansu", "qinghai", "ningxia", "xinjiang"]
 ];
