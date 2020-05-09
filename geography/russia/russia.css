@@ -1,0 +1,20 @@
+#character {
+	font-size: 30vmin;
+}
+
+#main_panel {
+	width: 857px;
+	position: relative;
+}
+
+.side_panel {
+	width: 300px;
+}
+
+.region{
+	fill: #b5b5b5;
+}
+
+.region_stroke{
+	stroke: #6a6a6a;
+}
