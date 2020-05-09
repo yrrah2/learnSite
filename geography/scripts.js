@@ -19,10 +19,14 @@ function new_character()
 		rnd = Math.floor(Math.random() * script_now.length);			// Choose a random state
 	};
 	
-	$('.' + script_now[current]).css("fill", "#b5b5b5");				// Colour the chosen state red
-	$('.' + script_now[current] + "_stroke").css("stroke", "#6a6a6a");		// Colour the circle of the chosen state red
+	if ( update == 0 ){
+		$('.' + script_now[current]).css("fill", "#b5b5b5");			// Colour the old state grey
+		$('.' + script_now[current] + "_stroke").css("stroke", "#6a6a6a");	// Colour the old circle grey
+	}
 	$('.' + script_now[rnd]).css("fill", "#C12838");				// Colour the chosen state red
 	$('.' + script_now[rnd] + "_stroke").css("stroke", "#C12838");			// Colour the circle of the chosen state red
+
+	update = 0;
 };
 
 function check()
@@ -30,8 +34,8 @@ function check()
 	var textValue = $('#typetext').val(); 						// Get the answer from the input box
 	
 	if ( latin_now[rnd].toUpperCase() == textValue.toUpperCase() ){ 		// Check if the answer is correct, case independent
+		if ( update == 1 ) { showbox() }; 					// If the selection of characters has changed, update them
 		new_character(); 							// Show a new character from the selection
-		if ( update == 1 ) { showbox(); update = 0 }; 				// If the selection of characters has changed, update them
 		correct++ ; 								// Increase number of correct answers
 		$("#correct").text(correct);						// Update the correct score
 	} else { 
@@ -55,6 +59,8 @@ $(document).ready(function() {
 
 function showbox() {
 	var checkedBoxes = $("input.checkbox:checked");					// Get all checked checkboxes
+	$('.' + script_now[rnd]).css("fill", "#b5b5b5");			// Colour the old state grey
+	$('.' + script_now[rnd] + "_stroke").css("stroke", "#6a6a6a");		// Colour the old circle grey
 
 	if (checkedBoxes.length == 0) { alert("You are an idiot") } else {		// Make sure at least one is checked
 		script_now = script_type;						// Empty the current character selection
