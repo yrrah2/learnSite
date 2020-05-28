@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<title>thai</title>
+	<link rel="icon" href="../favicon.png">
+	<link rel="stylesheet" href="thai.css">
+	<link rel="stylesheet" href="../scripts.css">
+	<link rel="stylesheet" href="../../style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="word_dictionary.js"></script>
+	<script src="../scripts.js"></script>
+</head>
+
+<body>
+	<div id="menu">
+		<a href="https://yrrah2.github.io/learnSite/">home</a>
+		<a href="https://yrrah2.github.io/learnSite/scripts/"><b>scripts</b></a>
+		<a href="https://yrrah2.github.io/learnSite/geography/">geography</a>
+		<a href="https://yrrah2.github.io/learnSite/history/">history</a>
+		<span class="right">
+			<a href="https://github.com/yrrah2/learnSite">source code</a>
+		</span>
+	</div>
+	<div id="nav">
+		<ul>
+			<li><b>europe</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/russian/">russian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/greek/">greek</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/georgian/">georgian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/armenian/">armenian</a></li>
+			<li><b>east asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/japanese/">japanese</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/korean/">korean</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/mongolian/">mongolian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/tibetan/">tibetan</a></li>
+			<li><b>south east asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/thai/">thai</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/burmese/">burmese</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/lao/">lao</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/khmer/">khmer</a></li>
+			<li><b>south asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/hindi/">hindi</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/bengali/">bengali</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/malayalam/">malayalam</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/tamil/">tamil</a></li>
+			<li><b>west asia</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/arabic/">arabic</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/hebrew/">hebrew</a></li>
+			<li><b>also</b></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/mayan/">egyptian</a></li>
+				<li><a href="https://yrrah2.github.io/learnSite/scripts/mayan/">mayan</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="center">
+			<div style="display: inline-block">
+				<div class="character_panel side_panel">
+					<div class="third"></div>
+					<div class="third">Correct: <span id="correct">0</span></div>
+					<div class="third">Incorrect: <span id="incorrect">0</span></div>
+				</div>
+				<div class="character_panel" id="main_panel">
+					<span id="character" style="font-size: 8vmin;">あ</span>
+				</div>
+				<div class="character_panel side_panel">
+					<div class="third"></div>
+					<div class="third" id="answer"></div>
+					<div class="third" id="scolding"></div>
+				</div>
+			</span>
+		</div>
+
+		<div id="input_block" class="center">
+			<span>
+				<input  id="typetext" type="text">
+				<button id="jsstyle" onclick="check();">check answer</button>
+			</span>
+		</div>
+
+		<input style="display: none" type="checkbox" class="checkbox" value="0" checked>
+
+		<div id="test" style="padding: 25px;">
+			<a href="index.html">Visit character page</a>
+		</div>
+	</div>
+</body>
+
+</html>
