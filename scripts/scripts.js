@@ -7,7 +7,7 @@ var correct = 0;
 var incorrect = 0;
 
 var rnd = 0;
-var update = 0;
+var update_bool = 0;
 
 function new_character() 
 {
@@ -27,7 +27,7 @@ function check()
 	var textValue = $('#typetext').val(); 						// Get the answer from the input box
 	
 	if ( latin_now[rnd].toUpperCase() == textValue.toUpperCase() ){ 		// Check if the answer is correct, case independent
-		if ( update == 1 ) { showbox(); update = 0 }; 				// If the selection of characters has changed, update them
+		if ( update_bool == 1 ) { showbox(); update_bool = 0 };			// If the selection of characters has changed, update them
 		new_character(); 							// Show a new character from the selection
 		correct++ ; 								// Increase number of correct answers
 		$("#correct").text(correct);						// Update the correct score
@@ -53,7 +53,7 @@ $(document).ready(function() {
 function showbox() {
 	var checkedBoxes = $("input.checkbox:checked");					// Get all checked checkboxes
 
-	if (checkedBoxes.length == 0) { alert("You are an idiot") } else {		// Make sure at least one is checked
+	if (checkedBoxes.length == 0) { alert("Please select at least one character set") } else {	// Make sure at least one is checked
 		script_now = script_type;						// Empty the current character selection
 		latin_now = Array();							// Empty the current latin transliterations
 		for (i = 0; i < checkedBoxes.length; i++) {				// For each of the checked checkboxes
@@ -63,7 +63,7 @@ function showbox() {
 	}
 }
 
-function update_selection() { update = 1 };						// Update the character selection after the next correct answer
+function update_selection() { update_bool = 1 };					// Update the character selection after the next correct answer
 
 // Switch to table 1, highlight the table 1 tab
 function table_1() {
