@@ -35,3 +35,7 @@ var latin = [
 ["a", "i", "e", "o", "u"],
 ["krai","kraikrai", "low tone", "high tone"],
 ];
+
+function changefont(name) {
+    $("#character").css("font-family", name);
+}
